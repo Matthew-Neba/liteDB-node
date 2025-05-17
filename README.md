@@ -35,7 +35,7 @@ npm install litedb-node
 import { createClient } from "litedb-node";
 
 const client = await createClient()
-	.on("error", (err) => console.log("Redis Client Error", err))
+	.on("error", (err) => console.log("liteDB Client Error", err))
 	.connect();
 
 await client.set("key", "value");
@@ -47,7 +47,7 @@ The above code connects to localhost on port 9255 since no connect options were 
 
 ```js
 const client = await createClient()
-  .on('error', err => console.log('Redis Client Error', err))
+  .on('error', err => console.log('liteDB Client Error', err))
   .connect({
     host: host ip,
     port: port number
